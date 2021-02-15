@@ -59,4 +59,10 @@ class FirstController extends Controller
         $photo->save();
         return redirect('/');
     }
+    
+    public function search($s){
+        $photos = Song::whereRaw("title like concat('%', ?, '%')", [$s])->orderBy('votes', 'desc')->get();
+        $users = User::whereRaw("name LIKE CONCAT(?, '%')", [$s])->orderBy('id', 'desc')->get();
+        return view('firstcontroller.search', ["photos" => $photos, "users"=>$users]);
+    }
 }

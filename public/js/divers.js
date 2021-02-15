@@ -6,3 +6,17 @@ $(document).ready(function() {
          audio.play();
     })
 })
+
+$(document).ready(function(){
+    $('#searchdiv').hide();
+
+    $('#search').click(function(){
+        $('#searchdiv').slideToggle();
+    })
+
+    $("#formsearch").submit(function(e) {
+        e.preventDefault();
+        let s = e.target.elements[0].value;
+        window.location.href = '/search/'+ s;
+    })
+})

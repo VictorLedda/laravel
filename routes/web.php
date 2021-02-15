@@ -29,4 +29,4 @@ Route::get('/utilisateur/{id}', [FirstController::class, 'utilisateur'])->where(
 
 Route::get('/suivre/{id}', [FirstController::class, "suivre"])->middleware('auth')->where('id','[0-9]+');
 
-
+Route::get('/search/{s}', [FirstController::class, "search"]);

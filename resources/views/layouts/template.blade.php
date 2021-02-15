@@ -47,6 +47,14 @@
 <li><a href="/songs/create">New</a></li>
 @endauth
 
+    <li>
+        <span id='search'> Rechercher </span>
+    </li>
+    <div id='searchdiv' style='position: absolute'>
+        <form id='formsearch'>
+            <input type='search' placeholder='recherche'>
+        </form>
+    </div>
 @guest
                             @if (Route::has('login'))
                                 <li class="nav-item right">
