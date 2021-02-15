@@ -13,6 +13,7 @@ html,
 body {
   height: 100%;
   font-family: 'Josefin Sans', sans-serif;
+  background-color: red;
 }
 
 h1,
